@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Envio</title>
+	<link rel="icon"  href="../img/Logo2.png">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width , initial-scale=1.0">
+	<link rel="stylesheet" href="css/editorder.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+</head>
+	<body>
+	
+		<div class="container">
+	
+			<main>
+			 <div class="main__container">
+				<div class="main__title">
+				
+					<div class="main_greeting">
+						<h1> Edit Order</h1>
+						
+					</div>
+					 </div>
+				 
+
+			
+			
+		<div id="hide"  class="d-flex justify-content-center">
+			<form class="w-50" onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+			
+				<h2 style="text-align: center; margin-bottom: 30px; margin-top: 30px;">بيانات العميل</h2>
+				
+				<div class="row">
+					<div class="col">
+						<label class="hi">اسم المرسل اليه</label>
+						<br>
+						<label class="validation-error hide" id="fullNameValidationError">الرجاء ادخال البيانات</label>
+						<input type="text" name="fullName" class="form-control" id="fullName">
+					</div>
+					<div class="col">
+						<label class="hi">رقم هاتف المرسل اليه</label> <br><label class="validation-error hide" id="PnumberValidationError">الرجاء ادخال الرقم الصحيح</label>
+						<input type="number" pattern="^0" name="Pnumber" class="form-control" id="Pnumber">
+					</div>
+
+
+
+					<div class="col">
+						<label class="hi">المحافظة/المدينة</label> <br><label class="validation-error hide" id="mo7fzaValidationError">الرجاء ادخال البيانات</label>
+						<input type="text" name="mo7fza" class="form-control" id="mo7fza" list="datalist1">
+						<datalist id="datalist1">
+
+
+
+							<option value="الجيزة/إمبابة">
+							<option value="الجيزة/الدقى">
+							<option value="الجيزة/الرماية">
+							<option value="الجيزة/العجوزة">
+							<option value="الجيزة/العمرانية">
+							<option value="الجيزة/القرية الفرعونية">
+							<option value="الجيزة/الكيت كات">
+							<option value="الجيزة/المنيب">
+							<option value="الجيزة/المهندسين">
+							<option value="الجيزة/الهرم">
+							<option value="الجيزة/الوراق">
+							<option value="الجيزة/بولاق الدكرور">
+							<option value="الجيزة/ترسا">
+							<option value="الجيزة/حدائق الاهرام"> 
+							<option value="الجيزة/حى الجيزة">
+							<option value="الجيزة/ساقية مكى">
+							<option value="الجيزة/سقارة">
+							<option value="الجيزة/صفط">
+							<option value="الجيزة/فيصل">
+							<option value="الجيزة/كرداسة">
+							<option value="الجيزة/كفر طهرمس">
+							<option value="الجيزة/مريوطية">
+							<option value="الجيزة/ميت عقبة">
+							<option value="القاهرة/الحلمية">
+							<option value="القاهرة/الزمالك">
+							<option value="القاهرة/الزيتون">
+							<option value="القاهرة/الساحل">
+							<option value="القاهرة/السيدة زينب">
+							<option value="القاهرة/العباسية">
+							<option value="القاهرة/المرج">
+							<option value="القاهرة/المطرية">
+							<option value="القاهرة/المعادي">
+							<option value="القاهرة/المقطم">
+							<option value="القاهرة/المنيل">
+							<option value="القاهرة/النزهة">
+							<option value="القاهرة/الوايلي">
+							<option value="القاهرة/حدائق القبة">
+							<option value="القاهرة/دار السلام">
+							<option value="القاهرة/زهراء المعادى">
+							<option value="القاهرة/شبرا">
+							<option value="القاهرة/شيراتون">
+							<option value="القاهرة/عزبة النخل">
+							<option value="القاهرة/عين شمس">
+							<option value="القاهرة/قصر النيل">
+							<option value="القاهرة/مدينة السلام">
+							<option value="القاهرة/مدينة نصر">
+							<option value="القاهرة/مصر الجديدة">
+							<option value="القاهرة/وسط البلد">
+							<option value="القليوبية/شبرا الخيمة">
+							<option value="الجيزة/اكتوبر - المنطقة الصناعية">
+							<option value="الجيزة/اكتوبر- الاحياء">
+							<option value="الجيزة/أكتوبر - منطقة الحصري">
+							<option value="الجيزة/اكتوبر - المتميز والسياحية">
+							<option value="الجيزة/اكتوبر - مدينة الشيخ زايد">
+							<option value="الجيزة/الشيخ زايد- الاحياء">
+							<option value="الجيزة/مدينة الخمايل">
+							<option value="الجيزة/طريق الواحات">
+							<option value="الجيزة/مدينة الفردوس">
+							<option value="الجيزة/دريم لاند">
+							<option value="الجيزة/حى الاشجار">
+							<option value="الجيزة/مدينة الانتاج الاعلامى">
+							<option value="الجيزة/هرم سيتى">
+							<option value="الجيزة/القرية الذكية">
+							<option value="الجيزة/ابورواش الصناعية">
+							<option value="الجيزة/الطريق الصحراوي الى ال كيلو 28">
+							<option value="الجيزة/البدرشين">
+							<option value="الجيزة/البراجيل">
+							<option value="القاهرة/التجمع الثالث">
+							<option value="الجيزة/المنصورية">
+							<option value="القاهرة/حدائق حلوان">
+							<option value="القاهرة/حلوان">
+							<option value="القاهرة/مدينة 15 مايو">
+							<option value="القاهرة/مدينة الشروق">
+							<option value="القاهرة/مدينة بدر">
+							<option value="القاهرة/مدينتي">
+							<option value="القاهرة/التجمع الأول">
+							<option value="القاهرة/التجمع الثالث">
+							<option value="القاهرة/التجمع الخامس">
+							<option value="القاهرة/مدينة الرحاب">
+							<option value="القليوبية/بهتيم">
+							<option value="القليوبية/مدينة العبور">
+
+
+
+
+
+
+
+
+
+
+						</datalist>
+					</div>
+				</div>
+				<div class="row">
+
+					<div class="col">
+						<label class="hi2">العنوان بالتفصيل</label> <br><label class="validation-error hide" id="adressValidationError">الرجاء ادخال البيانات</label>
+						<input type="text" name="adress" class="form-control" id="adress">
+					</div>
+
+
+
+
+
+				</div>
+				<h2 style="text-align: center; margin-bottom: 30px; margin-top: 30px;">بيانات الشحنة</h2>
+				<div class="row">
+
+
+
+					<div class="col">
+						<label class="hi">قيمة الشحنة</label> <br><label class="validation-error hide" id="mokdmValidationError">الرجاء التأكد الرجاء ادخال البيانات</label>
+						<input type="number" name="mokdm" class="form-control" id="mokdm">
+					</div>
+
+					<div class="col">
+						<label class="hi">محتوي الشحنة</label> <br><label class="validation-error hide" id="onotesValidationError">الرجاء ادخال البيانات</label>
+						<input type="text" name="onotes" class="form-control" id="onotes">
+					</div>
+
+					<div class="col">
+						<label class="hi"> وزن الشحنة </label> <br><label class="validation-error hide" id="wznValidationError">الرجاء ادخال البيانات</label>
+						<input type="number" min="0" max="5" name="wzn" class="form-control" id="wzn">
+					</div>
+
+
+
+				</div>
+				<div class="row">
+
+				
+
+					<div class="col">
+						<div class="datee">
+							<label class="hi" for="start">تاريخ استلام كابتن التوصيل </label> <br><label class="validation-error hide" id="dateValidationError">الرجاء التأكد من التاريخ</label>
+							<input type="date" id="date" class="form-control" name="date" value="dd-mm-yyyy">
+						</div>
+					</div>
+					<div class="col">
+						<div class="datee">
+							<label class="hi" for="start">تاريخ استلام المرسل اليه </label> <br><label class="validation-error hide" id="date2ValidationError">الرجاء التأكد من التاريخ</label>
+							<input type="date" id="date2" class="form-control" name="date" value="dd-mm-yyyy" >
+						</div>
+					</div>
+				</div>
+				<div class="btn-container">
+					<input class="btn btn-warning" style="background: #14565b !important;
+                        border-color: #14565b !important; color: #fff" onclick="insert" id="insert" type="submit" value="تعديل شحنة">
+				</div>
+			</form>
+
+		</div>
+	
+					
+					
+				</div>
+			</main>
+				
+		
+			
+		</div>
+	
+				<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+	<!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+	<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+
+	<!-- Add Firebase products that you want to use -->
+	<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+
+	<script>
+		// Your web app's Firebase configuration
+		// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+		var firebaseConfig = {
+			apiKey: "AIzaSyDTgOP9Eow_hCu_MF7TQkMiIFkJQKAnh58",
+			authDomain: "shipply-fc7a0.firebaseapp.com",
+			databaseURL: "https://shipply-fc7a0.firebaseio.com",
+			projectId: "shipply-fc7a0",
+			storageBucket: "shipply-fc7a0.appspot.com",
+			messagingSenderId: "1086969546941",
+			appId: "1:1086969546941:web:5b0f7efa1911243bf88fd4",
+			measurementId: "G-PR8GPP4DBY"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+		firebase.analytics();
+		console.log(firebaseConfig);
+	</script>
+		<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+		<script src="js/editorder.js"></script>
+		
+		
+		
+	</body>
+</html>

@@ -1,0 +1,323 @@
+body label.hi {
+	font-size: 14px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	text-align: right;
+	font-weight: bold;
+	
+}
+.navbar {
+  overflow: hidden;
+  background-color:  #f8f9fa !important;
+	margin-bottom: 10px;
+}
+
+input[type="date"]
+{
+    display:block;
+  
+    /* Solution 1 */
+     -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    min-height: 1.2em; 
+  
+    /* Solution 2 */
+    /* min-width: 96%; */
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none !important;
+}
+.clr{
+	color: #030b51;
+}
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+.dropdown .form-control{
+	margin-bottom: 5px;
+	margin-top: 0px !important;
+}
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+ 
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+*{
+	padding: 0;
+	margin: 0;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button{
+	-webkit-appearance : none ;
+	margin: 0;
+}
+label.validation-error{
+    color:   red;
+    margin-left: 0px;
+	font-size: 10px;
+	text-align: left;
+	margin-top: 0px;
+}
+.containerr{
+	margin-bottom: 15px;
+	
+}
+.hi2{
+	text-align: right;
+	padding-left: 45%;
+	margin-bottom: 0px;
+	font-size: 14px;
+	margin-left: 0px;
+	margin-right: 0px;
+	text-align: right;
+	font-weight: bold;
+	
+}
+
+.hide{
+    display:none;
+}
+.btnedit{
+	color: lightgreen;
+	cursor: pointer;
+}
+.btndelete{
+	color: tomato;
+	cursor: pointer;
+}
+.d-flex  input{
+	margin: .9em 0em;
+	text-align:right;
+	
+	
+}
+select{
+	margin-top: 15px !important;
+	display: block;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+	overflow: visible;
+	-webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: -internal-light-dark(black, white);
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: textfield;
+    background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+    -webkit-rtl-ordering: logical;
+    cursor: text;
+    margin: 0em;
+    font: 400 13.3333px Arial;
+    padding: 1px 2px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: -internal-light-dark(rgb(118, 118, 118), rgb(195, 195, 195));
+    border-image: initial;
+}
+}
+label.hi{
+	text-align: right !important;
+	font-size: 10px  !important;
+	color: blue !important;
+}
+.btn{
+	margin-top: 10px !important;
+	display: inline-block !important;
+	padding:  !important ;
+
+	color: #212529;
+    background-color: #030b51;
+    border-color: #f551e;
+    border-width: 2px;
+    border-style: outset;
+	width: 100%;
+
+
+	font-size: 16px !important;
+	text-transform: uppercase !important;
+	letter-spacing: 0px !important;
+	text-align: center !important ;
+	transition: .3s ease !important ;
+	transition-property: background-color, color !important ;
+	
+}
+.btn2{
+	position: relative;
+	left: 0;
+		margin-top: 10px !important;
+	display: inline-block !important;
+	padding:  !important ;
+	color: black;
+	justify-content: center;
+	width: 60%;
+	height: 40px;
+	margin-left: 280px;
+	background-color: transparent !important;
+	border: 2px solid lightgreen  !important;
+	font-size: 16px !important;
+	text-transform: uppercase !important;
+	letter-spacing: 0px !important;
+	text-align: center !important ;
+	transition: .3s ease !important ;
+	transition-property: background-color, color !important ;
+}
+.btn2:hover{
+	color: white !important;
+	background-color: black !important;
+	opacity: 85%;
+}
+.btn:hover{
+	    color: #212529;
+    background-color: #e0a800;
+    border-color: #d39e00;
+	
+}
+.table2excel{
+	border-collapse: collapse;
+	margin: 25px 0px;
+	font-size: 0.9rem;
+	width: 100%;
+	
+	
+	border-radius: 5px 5px 0 0;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+.table2excel thead tr {
+	background-color: #030b51;
+	color: #fff;
+	text-align: center;
+	font-weight: bold;
+	padding-left: 15px;
+	padding-right: 15px;
+	
+}
+.table2excel th , .table2excel td{
+	padding: 12px 15px;
+	width: 100px;
+}
+.table2excel tbody tr{
+	border-bottom: 1px solid #dddddd;
+}
+
+.table2excel tbody tr:last-of-type{
+	border-bottom: 2px solid #030b51;
+}
+.table2excel tbody tr:hover{
+	
+	color: #030b51;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0,0,0,.05);
+}
+
+.xl
+{   
+	position:relative;
+	margin-bottom: 20px;
+}
+.dropdown select{
+	width: 100px !important;
+}
+
+.btn1 , .btn3 , .btn4 {
+	margin: 1.5em .6em;
+	padding: .3em 3.4em;
+}
+.exportToExcel {
+	margin-top: 1.5em ;
+	margin-bottom: 1.5em ;
+	margin-right: .6em;
+	margin-left: 10%;
+	padding: .3em 3.4em;
+}
+.bye{
+	width:auto;
+	text-align: center;
+	margin-top: 5px;
+	text-align: right;
+}
+.xl2{
+	text-align: center;
+}
+.xl2 h1{
+	margin-top: 30px;
+}
+.btns{
+	display: inline-block ;
+	color: #fff !important;
+	background: #030b51 !important;
+	padding: 8px 20px !important;
+	margin: 30px 0 !important;
+	border-radius: 30px !important;
+	transition: 0.7s;
+	border-color: black !important;
+	border: none;
+}
+.btns:hover{
+	color: #030b51 !important;
+	background: #ffffff !important;
+	font-weight: bold;
+	border-color: #ffffff !important;
+}
+#add{
+	display: none;
+}

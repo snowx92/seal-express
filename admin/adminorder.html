@@ -1,0 +1,242 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+ <title>Envio-Admin</title>
+	<link rel="icon"  href="../img/Logo2.png">
+	   
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width , initial-scale=1.0">
+	<link rel="stylesheet" href="css/adminorder.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	
+</head>
+	<body>
+		<div class="container"> 
+			<nav class="navbar">
+			  <div class="nav_icon" onclick="toggleSidebar()">
+				  <i class="fa fa-bars"></i>
+				</div>
+				<div class="navbar__left">
+					<a href="User.html" >Users</a>
+					<a href="order.html" class="active_link">Orders</a>
+					<a href="Admin.html" >Admin</a>
+				</div>
+				<div class="navbar__right">
+					<a href="#">
+					   <i class="fa fa-search"></i>
+					</a>
+					<a href="#">
+					   <i class="fa fa-clock-o"></i>
+					</a>
+					<a href="#">
+						<img width="30" src="avatar.png" alt="">
+					</a>
+				</div>
+			</nav>
+			<main>
+			 <div class="main__container">
+				<div class="main__title">
+				
+					<div class="main_greeting">
+						<h1>Order reports</h1>
+						<p>Delete , detactive and check</p>
+					</div>
+					 </div>
+				 
+				 	<div class="centerr">
+		<div class="row">
+			
+   					<div class="col">
+						<div class ="datee" >
+                        <label class="hi" for="start">الي </label>
+                        <input type="date" id="ela" class="form-control" name="date"
+                         value="yyyy-MM-dd"
+                         min="2020-09-16" max="2022-12-31">
+						</div>
+						
+					</div>
+						<div class="col">
+						<div class ="datee" >
+							<label class="hi" for="start">من </label>
+                        <input type="date" id="mn" class="form-control" name="date"
+                         value="yyyy-MM-dd" 
+							   
+                        min="2020-09-16" max="2022-12-31" >
+						</div>
+					</div>
+		</div>
+		</div>	
+					<div class="center">
+
+
+
+						<table>
+							<tr>
+								<th>الحالة</th>
+								<th>الاسم</th>
+
+							</tr>
+							<tr>
+								<td id="total">0</td>
+								<td>مجموع الاوردرات </td>
+
+							</tr>
+							<tr>
+								<td id="avalibl">0</td>
+								<td>الاوردرات المتاحة</td>
+
+							</tr>
+							<tr>
+								<td id="accpeted">0</td>
+								<td>الاوردرات المقبولة</td>
+
+							</tr>
+							<tr>
+								<td id="kedaltslem">0</td>
+								<td>الاوردرات قيد التسليم</td>
+
+							</tr>
+							<tr>
+								<td id="dilvered">0</td>
+								<td>اوردرات تم تسليمها</td>
+
+							</tr>
+							<tr>
+								<td id="deleted">0</td>
+								<td>اوردرات ملغية</td>
+
+							</tr>
+							<tr>
+								<td id="back">0</td>
+								<td>مرتجعات</td>
+
+							</tr>
+							<tr>
+								<td id="mokdam">0</td>
+								<td>مجموع المقدمات</td>
+
+							</tr>
+							<tr>
+								<td id="shan">0</td>
+								<td>مجموع مصاريف الشحن</td>
+
+							</tr>
+							<tr>
+								<td id="money">0</td>
+								<td>مجموع المستحقات</td>
+
+							</tr>
+
+						</table>
+						<button class="btn" type="submit" onclick="getReports()">اظهار التقارير</button>
+					</div>
+					
+				</div>
+			</main>
+			
+			
+			
+			<div id="sidebar">
+				<div class="sidebar__title">
+				<div class="sidebar__img">
+					<img style="width: 150px !important; padding-left: 40px;" src="../img/logofot.png" alt="">
+					<br>
+				
+					</div>
+					<i class="fa fa-times" id="sidebarIcon" onclick="closeSidebar()"></i>
+				</div>
+				
+				<div class="sidebar__menu">
+				<div class="sidebar__link active_menu_link">
+					<i class="fa fa-home"></i>
+					<a href="Admin.html">Dashboard</a>
+					</div>
+					<h2>Mange</h2>
+					
+					<div class="sidebar__link">
+					<i class="fa fas fa-bell"></i>
+						<a href="AdminNotifications.html">Admin Notifications</a>
+					</div>
+					
+					<div class="sidebar__link">
+					<i class="fa fa-upload"></i>
+						<a href="ImportUsersInfo.html">Import User Info</a>
+					</div>
+					
+		
+					
+					<div class="sidebar__link">
+					<i class="fa fa-search"></i>
+						<a href="SearchReport.html">Track Id</a>
+					</div>
+				    <div class="sidebar__link ">
+                    <i class="fa fa-search"></i>
+                    <a href="shipper.html">Shipper Orders</a>
+                </div>
+					  <div class="sidebar__link">
+                    <i class="fa fa-search"></i>
+                    <a href="courier.html">Courier Orders</a>
+                </div>
+						<div class="sidebar__link ">
+					<i class="fa fa-minus-circle"></i>
+						<a href="BlockUser.html">Block User</a>
+					</div>
+					
+					<div class="sidebar__link ">
+					<i class="fa fa-plus"></i>
+						<a href="UserDidn'tOrder.html">Add Order</a>
+					</div>
+					
+					
+					<div class="sidebar__link">
+					<i class="fa fa-comments"></i>
+						<a href="chat.html">Contact Us</a>
+					</div>
+					
+				
+					
+				<div class="sidebar__link">
+					<i class="fa fa-power-off"></i>
+						<a onclick="logout()" href="#">Logout</a>
+					</div>
+					
+				</div>
+			</div>
+			
+			
+		</div>
+		
+		<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+	<!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+	<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+
+	<!-- Add Firebase products that you want to use -->
+	<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+
+	<script>
+		// Your web app's Firebase configuration
+		// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+		var firebaseConfig = {
+			apiKey: "AIzaSyDTgOP9Eow_hCu_MF7TQkMiIFkJQKAnh58",
+			authDomain: "shipply-fc7a0.firebaseapp.com",
+			databaseURL: "https://shipply-fc7a0.firebaseio.com",
+			projectId: "shipply-fc7a0",
+			storageBucket: "shipply-fc7a0.appspot.com",
+			messagingSenderId: "1086969546941",
+			appId: "1:1086969546941:web:5b0f7efa1911243bf88fd4",
+			measurementId: "G-PR8GPP4DBY"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+		firebase.analytics();
+		console.log(firebaseConfig);
+	</script>
+		
+		<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+		<script src="js/adminorder.js"></script>
+		
+	</body>
+</html>

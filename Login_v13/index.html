@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Seal Express</title>
+	<link rel="icon" href="../img/Logo2.png">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--===============================================================================================-->
+
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<!--===============================================================================================-->
+</head>
+
+<body style="background-color: #999999;">
+
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="login100-more" style="background-image: url('../img/login.jpg');"></div>
+
+			<div class="wrap-login100 p-l-50 p-r-50 p-t-72 p-b-50">
+				<form class="login100-form validate-form">
+				<div id="hide1">
+					<span class="login100-form-title p-b-59">
+						انشاء حساب
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate="Name is required">
+						<span class="label-input100">الاسم الاول</span>
+						<input id="firstname" class="input100" type="text" name="name" placeholder="الاسم الاول">
+						<span class="focus-input100"></span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate="Name is required">
+						<span class="label-input100">الاسم الاخير</span>
+						<input id="lastname" class="input100" type="text" name="name" placeholder=" الاسم الاخير">
+						<span class="focus-input100"></span>
+					</div>
+
+
+					<div class="wrap-input100 validate-input" data-validate="Valid email is required: ex@abc.xyz">
+						<span class="label-input100">البريد الاكتروني</span>
+						<input id="email" class="input100" type="text" name="email" placeholder="البريد الالكتروني">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Username is required">
+						<span class="label-input100" >رقم الهاتف</span>
+						<input class="input100" type="tel" id="phone" name="username" placeholder="رقم الهاتف" pattern="^01[0-2]\d{1,8}$">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate="Password is required">
+						<span class="label-input100">كلمة المرور</span>
+						<input id="pass" class="input100" type="password" name="pass" placeholder="*************">
+						<span class="focus-input100"></span>
+					</div>
+
+
+					<div class="wrap-input100 " >
+						<span class="label-input100">كود الاحالة</span>
+						<input id="code" class="input100" type="number" placeholder="اختياري">
+						<span class="focus-input100"></span>
+					</div>
+					
+						<div class="wrap-input100 " >
+						<span class="label-input100">اسم الشركة</span>
+						<input id="company" class="input100" type="text" placeholder="اختياري">
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="flex-m w-full p-b-33">
+					
+						<div class="contact100-form-checkbox">
+							<input class="input-checkbox100" id="ckb1" type="checkbox" name="remember-me">
+							<label class="label-checkbox100" for="ckb1">
+								<span class="txt1">
+									انا اوافق على
+									<a href="../terms&conditons.html" class="txt2 hov1">
+										الشروط والاحكام
+									</a>
+								</span>
+							</label>
+						</div>
+						
+						
+
+
+					</div>
+					
+								<div class="flex-m w-full p-b-33">
+									<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<a style="cursor: pointer;" class="login100-form-btn" onclick="return signup()">
+								تسجيل الحساب
+							</a>
+							
+						</div>
+						
+								
+					
+						
+						
+						
+
+
+					</div>
+					
+					<!--
+					<div id="code">
+					<div  id="recaptcha-container" style="margin-bottom: 30px; margin-left: 20%"></div>
+					
+					
+					<div class="container-login100-form-btn" style="margin-left: 20%; color: white;">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<a style="cursor: pointer;" class="login100-form-btn" onclick="return phoneAuth()">
+								ارسال كود تأكيد
+							</a>
+							
+						</div>
+						
+
+
+						
+					</div>
+					</div>
+					<br>
+					<br>
+				
+					
+					</div>
+					<div id="hide2" style="display:none;" >
+					<div class="wrap-input100 ">
+						<span class="label-input100">تاكيد الكود</span>
+						<input id="verificationCode" class="input100" type="number" placeholder="الكود">
+						<span class="focus-input100"></span>
+					</div>
+					</div>
+
+					<div class="container-login100-form-btn" style="margin-left: 20%; color: white; display: none" id="hide3">
+						<div class="wrap-login100-form-btn">
+							<div class="login100-form-bgbtn"></div>
+							<a style="cursor: pointer;" class="login100-form-btn" onclick="return codeverify();">
+								تأكيد
+							</a>
+						</div>
+						-->
+						</div>
+					
+					
+					
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+
+
+
+	<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+	<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+
+	<!-- Add Firebase products that you want to use -->
+	<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+
+	<script>
+		// Your web app's Firebase configuration
+		// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+		var firebaseConfig = {
+			apiKey: "AIzaSyDTgOP9Eow_hCu_MF7TQkMiIFkJQKAnh58",
+			authDomain: "shipply-fc7a0.firebaseapp.com",
+			databaseURL: "https://shipply-fc7a0.firebaseio.com",
+			projectId: "shipply-fc7a0",
+			storageBucket: "shipply-fc7a0.appspot.com",
+			messagingSenderId: "1086969546941",
+			appId: "1:1086969546941:web:5b0f7efa1911243bf88fd4",
+			measurementId: "G-PR8GPP4DBY"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+		firebase.analytics();
+		console.log(firebaseConfig);
+	</script>
+
+	<script src="signup.js"></script>
+
+	<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body></html>

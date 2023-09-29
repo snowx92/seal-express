@@ -1,0 +1,453 @@
+<html>
+
+<head>
+
+    <title>Seal Express</title>
+
+
+    <link rel="stylesheet" href="css/EditLoction.css">
+    <link rel="icon" href="img/Logo2.png">
+
+
+
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <meta charset="UTF-8">
+
+
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="contact-box">
+            <div class="left">
+                <div id="map"></div>
+            </div>
+            <div class="right">
+                <h2>تعديل عنوان</h2>
+                <form>
+                    <div id="mm">
+                        <select id="adress2" class="field" required>
+								
+							</select>
+                    </div>
+
+                    <input type="text" name="" class="field" id="region" required="" placeholder="المنطقة" oninvalid="this.setCustomValidity('الرجاء ادخال المحافظه')" oninput="setCustomValidity('')" list="datalist1" />
+                    <datalist id="datalist1">
+							
+						<option value="اسوان/مدينة أسوان">
+        <option value="اسوان/ابو الريش">
+        <option value="اسوان/ابو سمبل">
+        <option value="اسوان/ادفو">
+        <option value="اسوان/البصيلية">
+        <option value="اسوان/الرديسية">
+        <option value="اسوان/السباعية">
+        <option value="اسوان/دراو">
+        <option value="اسوان/صحارى">
+        <option value="اسوان/كلابشة">
+        <option value="اسوان/كوم امبو">
+        <option value="اسوان/نصر النوبة">
+        <option value="اسيوط/مدينة أسيوط">
+        <option value="اسيوط/أبنوب">
+        <option value="اسيوط/أبو تيج">
+        <option value="اسيوط/أسيوط الجديدة">
+        <option value="اسيوط/البدارى">
+        <option value="اسيوط/الغنايم">
+        <option value="اسيوط/الفتح">
+        <option value="اسيوط/القوصيه">
+        <option value="اسيوط/ديروط">
+        <option value="اسيوط/ساحل سليم">
+        <option value="اسيوط/صدفا">
+        <option value="اسيوط/منفلوط">
+        <option value="الاسكندرية/أبو قير">
+        <option value="الاسكندرية/الإبراهيمية - الاسكندرية">
+        <option value="الاسكندرية/الجمرك">
+        <option value="الاسكندرية/الحضرة">
+        <option value="الاسكندرية/الدخيلة">
+        <option value="الاسكندرية/السيوف">
+        <option value="الاسكندرية/الظاهرية">
+        <option value="الاسكندرية/العامرية">
+        <option value="الاسكندرية/العصافرة">
+        <option value="الاسكندرية/العوايد">
+        <option value="الاسكندرية/المعمورة">
+        <option value="الاسكندرية/المنتزه">
+        <option value="الاسكندرية/المندرة">
+        <option value="الاسكندرية/المنشية">
+        <option value="الاسكندرية/النخيل">
+        <option value="الاسكندرية/النزهة - الاسكندرية">
+        <option value="الاسكندرية/الورديان">
+        <option value="الاسكندرية/باكوس">
+        <option value="الاسكندرية/بولكلي">
+        <option value="الاسكندرية/جليم">
+        <option value="الاسكندرية/سابا باشا">
+        <option value="الاسكندرية/سان ستيفانو">
+        <option value="الاسكندرية/سبورتنج">
+        <option value="الاسكندرية/ستانلي">
+        <option value="الاسكندرية/سموحة">
+        <option value="الاسكندرية/سيدي بشر">
+        <option value="الاسكندرية/سيدي جابر">
+        <option value="الاسكندرية/شدس">
+        <option value="الاسكندرية/عجمي">
+        <option value="الاسكندرية/فلمنج">
+        <option value="الاسكندرية/فيكتوريا">
+        <option value="الاسكندرية/كامب شيزار">
+        <option value="الاسكندرية/كفر عبدو">
+        <option value="الاسكندرية/كليوباترا">
+        <option value="الاسكندرية/لوران">
+        <option value="الاسكندرية/محرّم بيك">
+        <option value="الاسكندرية/محطة الرمل">
+        <option value="الاسكندرية/ميامي">
+        <option value="الاسكندرية/برج العرب">
+        <option value="الاسماعيلية/مدينة الإسماعيلية">
+        <option value="الاسماعيلية/أبوصوير">
+        <option value="الاسماعيلية/التل الكبير">
+        <option value="الاسماعيلية/القصاصين">
+        <option value="الاسماعيلية/القنطرة شرق">
+        <option value="الاسماعيلية/القنطرة غرب">
+        <option value="الاسماعيلية/فايد">
+        <option value="الاقصر/مدينة الأقصر">
+        <option value="الاقصر/أرمنت">
+        <option value="الاقصر/إسنا">
+        <option value="الاقصر/البياضية">
+        <option value="الاقصر/الزينية">
+        <option value="الاقصر/الطود">
+        <option value="الاقصر/القرنه">
+        <option value="البحر الاحمر/الغردقة">
+        <option value="البحر الاحمر/الجونة">
+        <option value="البحر الاحمر/القصير">
+        <option value="البحر الاحمر/رأس غارب">
+        <option value="البحر الاحمر/سفاجا">
+        <option value="البحر الاحمر/سهل حشيش">
+        <option value="البحر الاحمر/شلاتين">
+        <option value="البحر الاحمر/مرسى علم">
+        <option value="البحيرة/دمنهور">
+        <option value="البحيرة/أبو المطامير">
+        <option value="البحيرة/أبو حمص">
+        <option value="البحيرة/إدكو">
+        <option value="البحيرة/الدلنجات">
+        <option value="البحيرة/الرحمانية">
+        <option value="البحيرة/المحمودية">
+        <option value="البحيرة/النوبارية الجديدة">
+        <option value="البحيرة/ايتاي البارود">
+        <option value="البحيرة/بدر">
+        <option value="البحيرة/حوش عيسى">
+        <option value="البحيرة/رشيد">
+        <option value="البحيرة/شبراخيت">
+        <option value="البحيرة/كفر الدوار">
+        <option value="البحيرة/كوم حمادة">
+        <option value="البحيرة/وادي النطرون">
+        <option value="الجيزة/أوسيم">
+        <option value="الجيزة/إمبابة">
+        <option value="الجيزة/الدقى">
+        <option value="الجيزة/الرماية">
+        <option value="الجيزة/الصحفيين">
+        <option value="الجيزة/العجوزة">
+        <option value="الجيزة/العزيزية">
+        <option value="الجيزة/العمرانية">
+        <option value="الجيزة/القرية الفرعونية">
+        <option value="الجيزة/الكيت كات">
+        <option value="الجيزة/المنيب">
+        <option value="الجيزة/المهندسين">
+        <option value="الجيزة/الهرم">
+        <option value="الجيزة/الوراق">
+        <option value="الجيزة/بشتيل">
+        <option value="الجيزة/بولاق الدكرور">
+        <option value="الجيزة/ترسا">
+        <option value="الجيزة/حدائق الاهرام">
+        <option value="الجيزة/حى الجيزة">
+        <option value="الجيزة/دهشور">
+        <option value="الجيزة/ساقية مكى">
+        <option value="الجيزة/سقارة">
+        <option value="الجيزة/صفط">
+        <option value="الجيزة/فيصل - الجيزة">
+        <option value="الجيزة/كرداسة">
+        <option value="الجيزة/كفر طهرمس">
+        <option value="الجيزة/مريوطية">
+        <option value="الجيزة/ميت عقبة">
+        <option value="الجيزة/ناهيا">
+        <option value="الجيزة/اكتوبر - المنطقة الصناعية">
+        <option value="الجيزة/اكتوبر-  الاحياء">
+        <option value="الجيزة/أكتوبر - منطقة الحصري">
+        <option value="الجيزة/اكتوبر - المتميز والسياحية">
+        <option value="الجيزة/اكتوبر - مدينة الشيخ زايد">
+        <option value="الجيزة/الشيخ زايد- الاحياء">
+        <option value="الجيزة/مدينة الخمايل">
+        <option value="الجيزة/طريق الواحات">
+        <option value="الجيزة/مدينة الفردوس">
+        <option value="الجيزة/دريم لاند">
+        <option value="الجيزة/حى الاشجار">
+        <option value="الجيزة/مدينة الانتاج الاعلامى">
+        <option value="الجيزة/هرم سيتى">
+        <option value="الجيزة/القرية الذكية">
+        <option value="الجيزة/ابورواش الصناعية">
+        <option value="الجيزة/الطريق الصحراوي الى ال كيلو 28">
+        <option value="الجيزة/البدرشين">
+        <option value="الجيزة/البراجيل">
+        <option value="الجيزة/الحوامدية">
+        <option value="الجيزة/الصف">
+        <option value="الجيزة/المنصورية">
+        <option value="الجيزة/جزيرة الدهب وكولدير">
+        <option value="الدقهلية/المنصورة">
+        <option value="الدقهلية/أجا">
+        <option value="الدقهلية/أخطاب">
+        <option value="الدقهلية/الجمالية">
+        <option value="الدقهلية/السنبلاوين">
+        <option value="الدقهلية/المطرية - الدقهلية">
+        <option value="الدقهلية/المنزلة">
+        <option value="الدقهلية/بلقاس">
+        <option value="الدقهلية/بني عبيد">
+        <option value="الدقهلية/تمى الامديد">
+        <option value="الدقهلية/جمصه">
+        <option value="الدقهلية/دكرنس">
+        <option value="الدقهلية/شربين">
+        <option value="الدقهلية/طلخا">
+        <option value="الدقهلية/منية النصر">
+        <option value="الدقهلية/ميت سلسيل">
+        <option value="الدقهلية/ميت غمر">
+        <option value="الدقهلية/نبروه">
+        <option value="السويس/حي السويس">
+        <option value="السويس/فيصل - السويس">
+        <option value="السويس/العين السخنة">
+        <option value="السويس/حى الجناين">
+        <option value="السويس/حي الأربعين">
+        <option value="السويس/حي عتاقة">
+        <option value="الشرقية/العاشر من رمضان">
+        <option value="الشرقية/الزقازيق">
+        <option value="الشرقية/أبو حماد">
+        <option value="الشرقية/أبو كبير">
+        <option value="الشرقية/أولاد صقر">
+        <option value="الشرقية/الإبراهيمية - الشرقية">
+        <option value="الشرقية/الحسينية">
+        <option value="الشرقية/الصالحية الجديدة">
+        <option value="الشرقية/بلبيس">
+        <option value="الشرقية/ديرب نجم">
+        <option value="الشرقية/فاقوس">
+        <option value="الشرقية/كفر صقر">
+        <option value="الشرقية/مشتول السوق">
+        <option value="الشرقية/منيا القمح">
+        <option value="الشرقية/ههيا">
+        <option value="الغربية/طنطا">
+        <option value="الغربية/المحلة الكبرى">
+        <option value="الغربية/بسيون">
+        <option value="الغربية/السنطة">
+        <option value="الغربية/زفتى">
+        <option value="الغربية/سمنود">
+        <option value="الغربية/قطور">
+        <option value="الغربية/كفر الزيات">
+        <option value="الفيوم/مدينة الفيوم">
+        <option value="الفيوم/أطسا">
+        <option value="الفيوم/إبشواي">
+        <option value="الفيوم/الفيوم الجديدة">
+        <option value="الفيوم/سنورس">
+        <option value="الفيوم/طامية">
+        <option value="الفيوم/يوسف الصديق">
+        <option value="القاهرة/الحلمية">
+        <option value="القاهرة/الزمالك">
+        <option value="القاهرة/الزيتون">
+        <option value="القاهرة/الساحل">
+        <option value="القاهرة/السيدة زينب">
+        <option value="القاهرة/العباسية">
+        <option value="القاهرة/المرج">
+        <option value="القاهرة/المطرية - القاهرة">
+        <option value="القاهرة/المعادي">
+        <option value="القاهرة/المقطم">
+        <option value="القاهرة/المنيل">
+        <option value="القاهرة/النزهة - القاهرة">
+        <option value="القاهرة/الوايلي">
+        <option value="القاهرة/حدائق القبة">
+        <option value="القاهرة/دار السلام">
+        <option value="القاهرة/زهراء المعادى">
+        <option value="القاهرة/شبرا">
+        <option value="القاهرة/شيراتون">
+        <option value="القاهرة/عزبة النخل">
+        <option value="القاهرة/عين شمس">
+        <option value="القاهرة/قصر النيل">
+        <option value="القاهرة/مدينة السلام">
+        <option value="القاهرة/مدينة نصر">
+        <option value="القاهرة/مصر الجديدة">
+        <option value="القاهرة/وسط البلد">
+        <option value="القاهرة/القاهرة الجديدة - التجمع الأول">
+        <option value="القاهرة/القاهرة الجديدة - التجمع الثالث">
+        <option value="القاهرة/القاهرة الجديدة - التجمع الخامس">
+        <option value="القاهرة/القاهرة الجديدة - مدينة الرحاب">
+        <option value="القاهرة/حدائق حلوان">
+        <option value="القاهرة/حلوان">
+        <option value="القاهرة/مدينة   15 مايو">
+        <option value="القاهرة/مدينة الشروق">
+        <option value="القاهرة/مدينة بدر">
+        <option value="القاهرة/مدينتي">
+        <option value="القاهرة/العاصمة الإدارية الجديدة">
+        <option value="القليوبية/بهتيم">
+        <option value="القليوبية/شبرا الخيمة">
+        <option value="القليوبية/مدينة العبور">
+        <option value="القليوبية/بنها">
+        <option value="القليوبية/الخانكة">
+        <option value="القليوبية/ابوزعبل">
+        <option value="القليوبية/الخصوص">
+        <option value="القليوبية/القناطر الخيرية">
+        <option value="القليوبية/شبين القناطر">
+        <option value="القليوبية/طوخ">
+        <option value="القليوبية/قليوب">
+        <option value="القليوبية/قها">
+        <option value="القليوبية/كفر شكر">
+        <option value="المنوفية/أشمون">
+        <option value="المنوفية/الباجور">
+        <option value="المنوفية/الشهداء">
+        <option value="المنوفية/بركة السبع">
+        <option value="المنوفية/تلا">
+        <option value="المنوفية/سرس الليان">
+        <option value="المنوفية/شبين الكوم">
+        <option value="المنوفية/قويسنا">
+        <option value="المنوفية/منوف">
+        <option value="المنوفية/ميت العز">
+        <option value="المنوفية/السادات">
+        <option value="المنيا/مدينة المنيا">
+        <option value="المنيا/أبو قرقاص">
+        <option value="المنيا/العدوة">
+        <option value="المنيا/المنيا الجديدة">
+        <option value="المنيا/بني مزار">
+        <option value="المنيا/دير مواس">
+        <option value="المنيا/سمالوط">
+        <option value="المنيا/مطاي">
+        <option value="المنيا/مغاغة">
+        <option value="المنيا/ملوي">
+        <option value="بني سويف/مدينة بني سويف">
+        <option value="بني سويف/إهناسيا">
+        <option value="بني سويف/الفشن">
+        <option value="بني سويف/الواسطى">
+        <option value="بني سويف/ببا">
+        <option value="بني سويف/بني سويف الجديدة">
+        <option value="بني سويف/سمسطا">
+        <option value="بني سويف/ناصر">
+        <option value="بورسعيد/حي الجنوب">
+        <option value="بورسعيد/حي الزهور">
+        <option value="بورسعيد/حي الشرق">
+        <option value="بورسعيد/حي الضواحي">
+        <option value="بورسعيد/حي العرب">
+        <option value="بورسعيد/حي المناخ">
+        <option value="بورسعيد/مدينة بورفؤاد">
+        <option value="جنوب سيناء/شرم الشيخ">
+        <option value="جنوب سيناء/أبو رديس">
+        <option value="جنوب سيناء/أبو زنيمة">
+        <option value="جنوب سيناء/دهب">
+        <option value="جنوب سيناء/راس سدر">
+        <option value="جنوب سيناء/سانت كاترين">
+        <option value="جنوب سيناء/طابا">
+        <option value="جنوب سيناء/طور سيناء">
+        <option value="جنوب سيناء/نويبع">
+        <option value="دمياط/مدينة دمياط">
+        <option value="دمياط/الروضة">
+        <option value="دمياط/الزرقا">
+        <option value="دمياط/السرو">
+        <option value="دمياط/دمياط الجديدة">
+        <option value="دمياط/رأس البر">
+        <option value="دمياط/عزبة البرج">
+        <option value="دمياط/فارسكور">
+        <option value="دمياط/كفر البطيخ">
+        <option value="دمياط/كفر سعد">
+        <option value="دمياط/ميت أبوغالب">
+        <option value="سوهاج/مدينة سوهاج">
+        <option value="سوهاج/أخميم">
+        <option value="سوهاج/البلينا">
+        <option value="سوهاج/العسيرات">
+        <option value="سوهاج/المراغة">
+        <option value="سوهاج/المنشاة">
+        <option value="سوهاج/جرجا">
+        <option value="سوهاج/جهينة">
+        <option value="سوهاج/دارالسلام - سوهاج">
+        <option value="سوهاج/ساقلتة">
+        <option value="سوهاج/طما">
+        <option value="سوهاج/طهطا">
+        <option value="قنا/مدينة قنا">
+        <option value="قنا/أبو تشت">
+        <option value="قنا/الوقف">
+        <option value="قنا/شنا">
+        <option value="قنا/فرشوط">
+        <option value="قنا/قفط">
+        <option value="قنا/قوص">
+        <option value="قنا/نجع حمادي">
+        <option value="قنا/نقادة">
+        <option value="كفر الشيخ/مدينة كفر الشيخ">
+        <option value="كفر الشيخ/البرلس">
+        <option value="كفر الشيخ/الحامول">
+        <option value="كفر الشيخ/الرياض">
+        <option value="كفر الشيخ/بلطيم">
+        <option value="كفر الشيخ/بيلا">
+        <option value="كفر الشيخ/دسوق">
+        <option value="كفر الشيخ/سيدى سالم">
+        <option value="كفر الشيخ/فوه">
+        <option value="كفر الشيخ/قلين">
+        <option value="كفر الشيخ/مطوبس">
+        <option value="مطروح/مرسى مطروح">
+        <option value="مطروح/الحمام">
+        <option value="مطروح/الساحل الشمالي">
+        <option value="مطروح/السلوم">
+        <option value="مطروح/الضبعة">
+        <option value="مطروح/العلمين">
+        <option value="مطروح/النجيلة">
+        <option value="مطروح/براني">
+        <option value="مطروح/سيوة">
+        <option value="مطروح/ماريناالعلمين">
+				
+							
+						</datalist>
+
+
+
+                    <input type="text" name="" class="field" id="address" required="" placeholder="العنوان" oninvalid="this.setCustomValidity('الرجاء ادخال العنوان')" oninput="setCustomValidity('')" />
+                    <input type="text" name="" class="field" id="title" required="" placeholder="اسم الوكيشن" oninvalid="this.setCustomValidity('الرجاء كتابة اسم الوكيشن')" oninput="setCustomValidity('')" />
+
+                    <button class="btn" type="button" onclick="initMap()">العثور على موقعك</button><br><br>
+                    <button class="btn" type="button" onclick="deletlocation()">حذف العنوان الحالي</button><br><br>
+                    <button class="btn" type="button" onclick="addlocation()">تعديل العنوان الحالي</button><br><br>
+
+                    <a href="AddLoction.html" class="aa">أضافة عنوان اخرى</a>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyDTgOP9Eow_hCu_MF7TQkMiIFkJQKAnh58",
+            authDomain: "shipply-fc7a0.firebaseapp.com",
+            databaseURL: "https://shipply-fc7a0.firebaseio.com",
+            projectId: "shipply-fc7a0",
+            storageBucket: "shipply-fc7a0.appspot.com",
+            messagingSenderId: "1086969546941",
+            appId: "1:1086969546941:web:5b0f7efa1911243bf88fd4",
+            measurementId: "G-PR8GPP4DBY"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        console.log(firebaseConfig);
+    </script>
+
+
+    <script src="js/EditLoction.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpiUD1palEqNtaUO4rWfPzdsh4FBd_j2k"></script>
+</body>
+
+
+
+
+
+</html>

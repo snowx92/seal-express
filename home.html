@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Seal Express</title>
+
+    <link rel="stylesheet" href="css/home.css">
+
+    <link rel="icon" href="img/Logo2.png">
+
+
+
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma-rtl.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+
+<body>
+
+    <input type="checkbox" id="check">
+
+
+
+    <div id="id01" class="w3-modal">
+        <div class="w3-modal-content">
+            <div class="w3-container">
+                <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright"><i class="fas fa-times"></i></span>
+                <h2 class="text-center">سبب الغاء الاوردر</h2>
+
+                <form class="modall" action="#">
+                    <p>
+                        <label>
+        <input name="group1" type="radio" checked />
+        <span>العميل لغى الاوردر</span>
+      </label>
+                    </p>
+                    <p>
+                        <label>
+        <input name="group1" type="radio" />
+        <span>تم التواصل مع شركة شحن اخرى</span>
+      </label>
+                    </p>
+                    <p>
+                        <label>
+        <input class="with-gap" name="group1" type="radio"  />
+        <span>اسباب اخري</span>
+      </label>
+                    </p>
+
+                </form>
+                <a class="waves-effect waves-light btn"><i class="fas fa-trash-alt"></i> حذف </a>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!-- sidebar start -->
+    <div class="sidebar">
+        <center>
+            <img id="pic" src="https://ptetutorials.com/images/user-profile.png" class="profile_img" alt="">
+            <h4 id="username"></h4>
+
+        </center>
+        <a href="order.html" type="button"><i class="fas fa-box"></i><span>أضافة شحنة جديدة</span></a>
+        <a href="AddLoction.html" type="button"><i class="fas fa-map-marker-alt"></i>
+			<span> اضافة عنوان</span></a>
+        <a href="EditLoction.html" type="button"><i class="fas fa-map-marker-alt"></i>
+			<span> تعديل عنوان</span></a>
+        <a href="ReportPage.html" type="button"><i class="fas fa-sticky-note"></i>
+			<span>التقارير</span></a>
+
+        <a href="#" onclick="logout()"><i class="fas fa-sign-out-alt"></i><span>تسجيل الخروج</span> </a>
+
+    </div>
+
+
+    <div class="contentt">
+
+        <div class="container">
+            <div class="row">
+
+                <div class="col s6">
+
+                    <div class="containerr" id="container" style="margin-top: 40px;">
+
+                    
+
+
+
+
+                    </div>
+                </div>
+
+
+
+
+                <div class="col s6" style="position: fixed;
+    margin-left: 33%;">
+
+                    <button class="button" style="width: 40%;
+						height: 90px; justify-content: space-between; background-color: #009688;">
+							<span class="icon" style="float: left;">
+								<i class="fa fa-truck"></i>
+							</span>
+							<p> <span id="requests"></span> الطلبات</p>
+						</button>
+                    <button class="button" style="width: 40%;
+						height: 90px; justify-content: space-between; background-color: #005782;">
+							<span class="icon" style="float: left;">
+							<i class="fa fa-truck"></i>
+							</span>
+							<p> <span id="proceccing"></span>  قيد التسليم </p>
+						</button>
+
+
+
+
+                    <button class="button" style="width: 40%;
+						height: 90px; justify-content: space-between;     background-color: #32c5d2;">
+							<span class="icon" style="float: left;">
+								<i class="fa fa-truck"></i>
+							</span>
+							<p> <span id="deliverd"></span> تم تسليمها</p>
+						</button>
+                    <button class="button" style="width: 40%;
+						height: 90px; justify-content: space-between; background-color: #2196f3;">
+							<span class="icon" style="float: left;">
+							<i class="fa fa-truck"></i>
+							</span>
+							<p> <span id="deniedback"></span>مرتجعات</p>
+						</button>
+
+
+
+
+
+                    <button class="button" style="width: 40%;
+						height: 90px; justify-content: space-between;background-color:#ff5722;">
+							<span class="icon" style="float: left;">
+								<i class="fa fa-money"></i>
+							</span>
+							<p> <span id="charged"></span> محفظتي </p>
+						</button>
+                    <button class="button" style="width: 40%;
+						height: 90px; justify-content: space-between;background-color: #f5222d;">
+							<span class="icon" style="float: left;">
+							<i class="fa fa-money"></i>
+							</span>
+							<p> <span id="wallet"></span>المستحقات </p>
+						</button>
+
+
+                    <button class="button" style="width: 80%;
+						height: 90px; justify-content: space-between; background-color: 	#DAA520;">
+							<span class="icon" style="float: left;">
+							<i class="fa fa-money"></i>
+							</span>
+							<p style="margin-left: 33%;"> <span id="gmoney"></span>اجمالي التحصيل</p>
+						</button>
+
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+        <canvas id="qr-code" style="display: none"></canvas>
+        <div id="PDF" style="display: none"></div>
+    </div>
+
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyDTgOP9Eow_hCu_MF7TQkMiIFkJQKAnh58",
+            authDomain: "shipply-fc7a0.firebaseapp.com",
+            databaseURL: "https://shipply-fc7a0.firebaseio.com",
+            projectId: "shipply-fc7a0",
+            storageBucket: "shipply-fc7a0.appspot.com",
+            messagingSenderId: "1086969546941",
+            appId: "1:1086969546941:web:5b0f7efa1911243bf88fd4",
+            measurementId: "G-PR8GPP4DBY"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        //console.log(firebaseConfig);
+    </script>
+
+
+
+    <script src="js/home.js"></script>
+</body>
+
+</html>

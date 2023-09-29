@@ -1,0 +1,201 @@
+<!doctype>
+<html>
+  <head>
+	  <title>Seal Express </title>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="jquery.table2excel.js"></script>
+
+	  <link rel="stylesheet" href="css/reportpage.css">
+	<link rel="icon" href="img/Logo2.png">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.6/xlsx.full.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/jzip@1.0.0/jzip.js"></script>
+	  
+	  
+	  <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
+	  <meta name="viewport" content="width=device-width , initial-scale=1.0">
+	<meta charset="UTF-8">
+	  
+	  
+	</head>
+	<body>
+		<h1>التقارير</h1>
+		<hr>
+	<div class="centerr">
+		<div class="row">
+			
+   					<div class="col">
+						<div class ="datee" >
+                        <label class="hi" for="start">الي </label>
+                        <input type="date" id="ela" class="form-control" name="date"
+                         value="yyyy-MM-dd" placeholder="MM/DD/YYYY"
+                         min="2020-09-16" max="2022-12-31">
+						</div>
+						
+					</div>
+						<div class="col">
+						<div class ="datee" >
+							<label class="hi" for="start">من </label>
+                        <input type="date" id="mn" class="form-control" name="date"
+                         value="yyyy-MM-dd" 
+							   
+                        min="2020-09-16" max="2022-12-31" >
+						</div>
+					</div>
+		</div>
+		</div>	
+		
+    <div class="center">
+		
+		
+		
+		<table  data-tableName="Test Table 2" id="employeeList">
+		  <tr>
+			<th>العدد</th>
+			<th>الحالة</th>
+
+		  </tr>
+		  <tr>
+			<td id="total" >0</td>
+			<td >اجمالي الشحنات </td>
+
+		  </tr>
+		  <tr>
+			<td id="accpeted">0</td>
+			<td>عدد الشحنات المقبولة</td>
+
+		  </tr>
+		  <tr>
+			<td id="t7ttsleem">0</td>
+			<td>عدد الشحنات تحت التسليم</td>
+
+		  </tr>
+		  <tr>
+			<td id="moslma">0</td>
+			<td>عدد الشحنات المسلمة</td>
+
+		  </tr>
+			  <tr>
+			<td id="mortg3">0</td>
+			<td>عدد الشحنات المرتجعة</td>
+
+		  </tr>
+			  <tr>
+			<td id="deleted">0</td>
+			<td>عدد الشحنات الملغية</td>
+
+		  </tr>
+			  <tr>
+			<td id="shan">0</td>
+			<td>اجمالي مصاريف الشحن</td>
+
+		  </tr>
+			  <tr>
+			<td id="mokdam">0</td>
+			<td>اجمالي سعر الشحنات</td>
+
+		  </tr>
+			
+		</table>
+		
+
+		<button class="btn btn-warning" type="submit" onclick="getReports()">اظهار التقارير</button>
+	
+		</div>
+		
+                <table class="table2excel table-striped" data-tableName="Test Table 2" id="employeeList2">
+                    <thead>
+                        <tr>
+                            <th>حالة الاوردر</th>
+							<th>تاريخ نزول الشحنة</th>
+							<th>اسم المرسل اليه</th>
+                            <th>رقم هاتف المرسل اليه</th>
+							<th>تاريخ استلام كابتن التوصيل</th>
+							<th>تاريخ استلام المرسل اليه</th>
+                            <th>ثمن الشحنة</th>
+							<th>ثمن توصيل الشحنة</th>
+							<th>محتوي الشحنة</th>
+							<th>عنوان تسليم الاوردر</th>
+							<th>محافظة/منطقة التسليم</th>
+							<th>محافظة/منطقة الاستلام</th>
+							
+							
+                        </tr>
+                    </thead>
+					
+                    <tbody>
+
+                    </tbody>
+					
+						
+                        
+                    
+					
+                </table>
+	
+	<button class="exportToExcel btn-success" id="btn3" >حفظ بيانات الشحنات على اكسيل</button>
+					
+					<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	 				<script src="jquery.table2excel.js"></script>
+	 				
+	 				<script>
+				$(".exportToExcel").click(function(e){
+						var table = $(this).prev('.table2excel');
+						var preserveColors = (table.hasClass('table2excel_with_colors') ? true : false);
+						$(table).table2excel({
+							exclude: ".noExl",
+						name: "Excel Document",
+							filename: "Quicker"+ new Date().toISOString().replace(/[\-\:\.]/g, "") + ".xls",
+							fileext: ".csv	",
+							exclude_img: true,
+							exclude_links: true,
+							exclude_inputs: true,
+							preserveColors: preserveColors
+						});
+						
+					
+				});
+
+					</script>
+	
+		
+		
+
+	<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+	<!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+	<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+
+	<!-- Add Firebase products that you want to use -->
+	<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+
+	<script>
+		// Your web app's Firebase configuration
+		// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+		var firebaseConfig = {
+			apiKey: "AIzaSyDTgOP9Eow_hCu_MF7TQkMiIFkJQKAnh58",
+			authDomain: "shipply-fc7a0.firebaseapp.com",
+			databaseURL: "https://shipply-fc7a0.firebaseio.com",
+			projectId: "shipply-fc7a0",
+			storageBucket: "shipply-fc7a0.appspot.com",
+			messagingSenderId: "1086969546941",
+			appId: "1:1086969546941:web:5b0f7efa1911243bf88fd4",
+			measurementId: "G-PR8GPP4DBY"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+		firebase.analytics();
+		console.log(firebaseConfig);
+	</script>
+	<script src="js/reportp.js"></script>
+
+	</body>
+</html>

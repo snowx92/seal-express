@@ -1,0 +1,94 @@
+<html>
+	
+<head>
+	
+<title>Quicker - Money</title>
+	
+<link rel="icon"  href="img/toplogo.jpeg">
+<link rel="stylesheet" href="css/money.css">
+	<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+	 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC1csiOxIDvl_99DZfxYJf2bId2XFFEKU8&callback=initMap"></script>
+
+	<meta name="viewport" content="width=device-width , initial-scale=1.0">
+	<meta charset="UTF-8">
+
+
+</head>
+<body>
+	
+				    <div class="wrapper">
+		
+			 <ul class="nav-area">
+				 
+				 
+				 
+			 <li><a href="#" onclick="logout()"> Logout </a></li>
+				 
+			 
+									
+			
+			
+						 
+			
+				 
+			 </ul>
+				   
+		   </div>
+				 
+	
+
+	<div class="container">
+	  <div class="contact-box">
+		
+		  	<div class="right">
+		  		<h2>اضافة فلوس علي المحفظة</h2>
+				<form>
+				<input type="number" name="" class="field" id="phoneNumber"   required="" placeholder="رقم الهاتف "
+					 oninvalid="this.setCustomValidity('الرجاء ادخال رقم الهاتف')"
+					 oninput="setCustomValidity('')" />
+					<input type="number" name="" class="field" id="money"  required="" placeholder="المبلغ بالجنية"
+					 oninvalid="this.setCustomValidity('الرجاء ادخال المبلغ')"
+					 oninput="setCustomValidity('')" />
+				
+	            <button class="btn" type="button" onclick="add_money()">أضافة الفلوس على المحافظة</button><br><br>
+					</form>
+		  </div>
+		</div>
+	</div>
+	
+	
+
+	
+	
+<script>
+			// Your web app's Firebase configuration
+			// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+			var firebaseConfig = {
+				apiKey: 'AIzaSyCVIyIfWmXXRN_Bv5-c34gYK907Pw798Uk',
+				authDomain: 'pickly-ed2f4.firebaseapp.com',
+				databaseURL: 'https://pickly-ed2f4.firebaseio.com',
+				projectId: 'pickly-ed2f4',
+				storageBucket: 'pickly-ed2f4.appspot.com',
+				messagingSenderId: '146413958165',
+				appId: '1:146413958165:web:b1ea7307bd1413c4dd0a1c',
+				measurementId: 'G-HV6VCFCH1Z',
+			};
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+			firebase.analytics();
+				
+				
+</script>
+
+	 
+<script src="js/money.js"></script>
+</body>
+
+
+
+
+
+</html>

@@ -1,0 +1,228 @@
+
+<!------ Include the above in your HEAD tag ---------->
+
+<html>
+<head>
+
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+
+	<link rel="stylesheet" href="css/chat.css">
+
+	<title>Envio-Admin</title>
+	<link rel="icon" href="../img/Logo2.png">
+
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width , initial-scale=1.0">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+	<!------ Include the above in your HEAD tag ---------->
+		<script src="js/chat.js"></script>
+</head>
+
+<body onload="on_load()">
+
+
+	<div class="container">
+		<main>
+			<nav class="navbar">
+				<div class="nav_icon" onclick="toggleSidebar()">
+					<i class="fa fa-bars"></i>
+				</div>
+
+				<div class="navbar__right">
+
+
+
+				</div>
+			</nav>
+			<h3 class=" text-center">خدمة العملاء</h3>
+			<div class="messaging" id="bodyy">
+
+
+
+
+
+
+			</div>
+
+		</main>
+				
+			<div id="sidebar">
+				<div class="sidebar__title">
+				<div class="sidebar__img">
+					<img style="width: 150px !important; padding-left: 40px;" src="../img/logofot.png" alt="">
+					<br>
+				
+					</div>
+					<i class="fa fa-times" id="sidebarIcon" onclick="closeSidebar()"></i>
+				</div>
+				
+				<div class="sidebar__menu">
+				<div class="sidebar__link ">
+					<i class="fa fa-home"></i>
+					<a href="Admin.html">Dashboard</a>
+					</div>
+					<h2>Mange</h2>
+					
+					<div class="sidebar__link">
+					<i class="fa fas fa-bell"></i>
+						<a href="AdminNotifications.html">Admin Notifications</a>
+					</div>
+					
+					<div class="sidebar__link">
+					<i class="fa fa-upload"></i>
+						<a href="ImportUsersInfo.html">Import User Info</a>
+					</div>
+					
+		
+					
+					<div class="sidebar__link">
+					<i class="fa fa-search"></i>
+						<a href="SearchReport.html">Track Id</a>
+					</div>
+				    <div class="sidebar__link ">
+                    <i class="fa fa-search"></i>
+                    <a href="shipper.html">Shipper Orders</a>
+                </div>
+					  <div class="sidebar__link">
+                    <i class="fa fa-search"></i>
+                    <a href="courier.html">Courier Orders</a>
+                </div>
+					
+						<div class="sidebar__link ">
+					<i class="fa fa-minus-circle"></i>
+						<a href="BlockUser.html">Block User</a>
+					</div>
+					
+					<div class="sidebar__link ">
+					<i class="fa fa-plus"></i>
+						<a href="UserDidn'tOrder.html">Add Order</a>
+					</div>
+					
+					
+					<div class="sidebar__link active_menu_link">
+					<i class="fa fa-comments"></i>
+						<a href="chat.html">Contact Us</a>
+					</div>
+					
+				
+					
+				<div class="sidebar__link">
+					<i class="fa fa-power-off"></i>
+						<a onclick="logout()" href="#">Logout</a>
+					</div>
+					
+				</div>
+			</div>
+			
+	</div>
+	<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+	<!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+	<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+
+	<!-- Add Firebase products that you want to use -->
+	<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+
+	<script>
+		// Your web app's Firebase configuration
+		// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+		var firebaseConfig = {
+			apiKey: "AIzaSyDTgOP9Eow_hCu_MF7TQkMiIFkJQKAnh58",
+			authDomain: "shipply-fc7a0.firebaseapp.com",
+			databaseURL: "https://shipply-fc7a0.firebaseio.com",
+			projectId: "shipply-fc7a0",
+			storageBucket: "shipply-fc7a0.appspot.com",
+			messagingSenderId: "1086969546941",
+			appId: "1:1086969546941:web:5b0f7efa1911243bf88fd4",
+			measurementId: "G-PR8GPP4DBY"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+		firebase.analytics();
+		console.log(firebaseConfig);
+	</script>
+		<script>console.log("dsads");
+function on_load() {
+ 
+	var ref = firebase.database().ref().child("messages");
+	ref.on("value", function (snap) {
+ 
+		snap.forEach(function (snapshot) {
+console.log("sdkjdsak");
+ 
+			let x = document.getElementById("bodyy");
+ 
+			let cardBody = document.createElement('div');
+			cardBody.className = "inbox_chat";
+ 
+ 
+			let card = document.createElement('div');
+			card.className = "chat_list";
+			cardBody.appendChild(card);
+ 
+			let card0 = document.createElement('div');
+			card0.className = "chat_people";
+			card.appendChild(card0);
+ 
+			let img = document.createElement("div");
+			img.className = "chat_img";
+			card0.appendChild(img);
+ 
+			let card2 = document.createElement('img');
+			card2.src = "https://firebasestorage.googleapis.com/v0/b/shipply-fc7a0.appspot.com/o/Main%2FSup.jpg?alt=media&token=14b10726-8aec-487a-beb8-47745486a0b5"
+			img.appendChild(card2);
+ 
+			let card3 = document.createElement('div');
+			card3.className = "chat_ib";
+			card0.appendChild(card3);
+ 
+			let h51 = document.createElement('h5');
+			h51.innerText=snapshot.child("name").val();
+			card3.appendChild(h51);
+ 
+			let p1 = document.createElement('p');
+			p1.innerText=snapshot.child("email").val();
+			card3.appendChild(p1);
+ 
+			let p2 = document.createElement('p');
+			p2.innerText=snapshot.child("phone").val();
+			card3.appendChild(p2);
+ 
+			let p3 = document.createElement('p');
+			p3.innerText=snapshot.child("message").val()
+			card3.appendChild(p3);
+ 
+ 
+			x.appendChild(cardBody);
+console.log(cardBody);
+ 
+ 
+ 
+		})
+ 
+ 
+	});
+ 
+ 
+}
+ 
+
+ 
+ 
+function logout() {
+	firebase.auth().signOut().then(logout => {
+ 
+		window.alert("signed out");
+		document.location.href = "../login.html";
+	}).catch(error => {});
+}
+ </script>
+
+</body></html>

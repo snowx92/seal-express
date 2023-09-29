@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Envio-Admin</title>
+    <link rel="icon" href="../img/Logo2.png">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    <link rel="stylesheet" href="css/courier.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.15.6/xlsx.full.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/jzip@1.0.0/jzip.js"></script>
+    <script src="FileSaver.js"></script>
+
+    <script src="jquery.table2excel.js"></script>
+</head>
+
+<body>
+    <div class="container">
+
+        <main>
+            <div class="main__container">
+
+
+                <div class="main__title">
+
+                    <div class="main_greeting">
+                        <h1>Courier Orders</h1>
+
+                    </div>
+                </div>
+
+
+                <div class="boxContainer">
+                    <table class="elementsContainer">
+                        <tr>
+                            <td>
+                                <input type="text" placeholder="رقم الهاتف" class="search" id="phoneNumber">
+
+                            </td>
+                            <td>
+                                <a href="#" onclick="getUser_fromPhone()"><i style="color: white" class="fa fa-search"></i></a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="center">
+
+                    <div id="PDF">
+
+                        <table data-tableName="Test Table 2" id="mytable" class="table2excel table-striped">
+                            <tr style="height: 10px; width: 15px;">
+                                <th style="height: 10px; width: 35px;"> رقم الاوردر </th>
+                                <th style="height: 10px; width: 35px;"> اسم المستلم </th>
+                                <th style="height: 10px; width: 35px;"> توقيع المندوب </th>
+
+                            </tr>
+
+
+
+                        </table>
+                    </div>
+
+
+                    <button class="exportToExcel btn btn-primary" style=" background-color: #14565b; color: #fff ;border:none; width: 30%; margin-top: 40%" type="button" onclick="exp()">Export to Exl</button>
+                    <button onclick="topdf()">ToPdf</button>
+                </div>
+
+
+
+
+
+
+
+
+            </div>
+        </main>
+
+
+
+
+
+
+
+
+        <div id="sidebar">
+            <div class="sidebar__title">
+                <div class="sidebar__img">
+                    <img style="width: 150px !important; padding-left: 40px;" src="../img/logofot.png" alt="">
+                    <br>
+
+                </div>
+                <i class="fa fa-times" id="sidebarIcon" onclick="closeSidebar()"></i>
+            </div>
+
+            <div class="sidebar__menu">
+                <div class="sidebar__link ">
+                    <i class="fa fa-home"></i>
+                    <a href="Admin.html">Dashboard</a>
+                </div>
+                <h2>Mange</h2>
+
+                <div class="sidebar__link">
+                    <i class="fa fas fa-bell"></i>
+                    <a href="AdminNotifications.html">Admin Notifications</a>
+                </div>
+
+                <div class="sidebar__link">
+                    <i class="fa fa-upload"></i>
+                    <a href="ImportUsersInfo.html">Import User Info</a>
+                </div>
+
+
+
+                <div class="sidebar__link">
+                    <i class="fa fa-search"></i>
+                    <a href="SearchReport.html">Track Id</a>
+                </div>
+                  <div class="sidebar__link ">
+                    <i class="fa fa-search"></i>
+                    <a href="shipper.html">Shipper Orders</a>
+                </div>
+
+                <div class="sidebar__link active_menu_link">
+                    <i class="fa fa-search"></i>
+                    <a href="courier.html">Courier Orders</a>
+                </div>
+
+                <div class="sidebar__link ">
+                    <i class="fa fa-minus-circle"></i>
+                    <a href="BlockUser.html">Block User</a>
+                </div>
+
+                <div class="sidebar__link ">
+                    <i class="fa fa-plus"></i>
+                    <a href="UserDidn'tOrder.html">Add Order</a>
+                </div>
+
+
+                <div class="sidebar__link">
+                    <i class="fa fa-comments"></i>
+                    <a href="chat.html">Contact Us</a>
+                </div>
+
+
+
+                <div class="sidebar__link">
+                    <i class="fa fa-power-off"></i>
+                    <a onclick="logout()" href="#">Logout</a>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-analytics.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyDTgOP9Eow_hCu_MF7TQkMiIFkJQKAnh58",
+            authDomain: "shipply-fc7a0.firebaseapp.com",
+            databaseURL: "https://shipply-fc7a0.firebaseio.com",
+            projectId: "shipply-fc7a0",
+            storageBucket: "shipply-fc7a0.appspot.com",
+            messagingSenderId: "1086969546941",
+            appId: "1:1086969546941:web:5b0f7efa1911243bf88fd4",
+            measurementId: "G-PR8GPP4DBY"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        console.log(firebaseConfig);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="js/courier.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="jquery.table2excel.js"></script>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
